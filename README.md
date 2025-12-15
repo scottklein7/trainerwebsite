@@ -1,37 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DAWG STRENGTH - Trainer Website
 
-## Getting Started
+A single-page Next.js application for a fitness trainer/coach website.
 
-First, run the development server:
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- **Node.js** (version 18 or higher) - [Download here](https://nodejs.org/)
+- **Git** - [Download here](https://git-scm.com/)
+- **Cursor** (or any code editor) - [Download here](https://cursor.sh/)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+Open your terminal and navigate to where you want to store the project, then run:
+
+```bash
+git clone <your-github-repo-url>
+cd kleincoach
+```
+
+Replace `<your-github-repo-url>` with the actual GitHub repository URL.
+
+### 2. Install Dependencies
+
+Install all required packages:
+
+```bash
+npm install
+```
+
+This will install all dependencies listed in `package.json`, including:
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- TypeScript
+- And other required packages
+
+### 3. Open in Cursor
+
+1. Open Cursor
+2. Go to **File → Open Folder**
+3. Select the `kleincoach` folder you just cloned
+
+### 4. Start the Development Server
+
+In the terminal (you can use Cursor's integrated terminal), run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server will start and you should see output like:
+```
+  ▲ Next.js 16.0.10
+  - Local:        http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. View the Website
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open your browser and navigate to:
+```
+http://localhost:3000
+```
 
-## Learn More
+You should now see the website running locally!
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/page.tsx` - Main page with all sections (Hero, About, Services, Client Stories, Contact, Quote)
+- `components/` - All React components
+- `components/ui/` - Reusable UI components (Button, Card, Carousel, etc.)
+- `app/globals.css` - Global styles and Tailwind configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Scripts
 
-## Deploy on Vercel
+- `npm run dev` - Start development server (http://localhost:3000)
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# trainerwebsite
+- This is a **single-page application** - all sections are on one page
+- The carousel component uses Embla Carousel for client stories
+- Navigation uses smooth scrolling to anchor links
+- The project uses Tailwind CSS 4 for styling
+
+## Troubleshooting
+
+**Port 3000 already in use?**
+- Kill the process using port 3000, or run: `npm run dev -- -p 3001`
+
+**Dependencies not installing?**
+- Make sure you have Node.js 18+ installed
+- Try deleting `node_modules` and `package-lock.json`, then run `npm install` again
+
+**TypeScript errors?**
+- Make sure all dependencies are installed: `npm install`
+- Restart your TypeScript server in Cursor (Cmd/Ctrl + Shift + P → "TypeScript: Restart TS Server")
